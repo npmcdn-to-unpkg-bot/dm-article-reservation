@@ -1,6 +1,6 @@
 (function(){
 	//the module
-	angular.module("dmArticleReservation", []); 
+	angular.module("dmArticleReservation", ["ngResource","toastr","ngMaterial"]); 
 	angular.module('dmArticleReservation').run(runBlock);
 	runBlock.$inject = ["$templateCache"];
 	
@@ -19,7 +19,7 @@
 	function articleReservation(Reservation, toastr, $templateCache) {
 		return {
 			restrict: 'EA',
-			templateUrl: 'app/directives/article-reservation/dm-article-reservation.html',
+			template: '../dm-article-reservation.html',
 			scope: {
 				article:"=",
 			},
@@ -115,5 +115,18 @@
 					update: {method: 'PUT'},
 					stripTrailingSlashes: false});
 		})
+		
+	//controller
+	angular.module('dmArticleReservation')
+			.controller('ctrlArticleReservation', ctrlArticleReservation);
+			
+	ctrlArticleReservation.$inject = ['$scope'];	
+		
+	function ctrlArticleReservation($scope){
+		console.log("Initialisation Article à vide");
+		$scope.article = {};
+	}	
+		
+		
 
 })();

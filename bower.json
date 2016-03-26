@@ -6,7 +6,7 @@
   "description": "reservation article pour dimagest",
   "main": [
     "./dm-article-reservation.js",
-	"./template.js"
+	"./dm-article-reservation.tpl.js"
   ],
   "moduleType": [],
   "keywords": [
@@ -19,7 +19,8 @@
     "angular": "^1.5.0",
     "angular-material": "master",
     "angular-permission": "^2.1.3",
-    "angular-toastr": "^1.7.0"
+    "angular-toastr": "^1.7.0",
+	"angular-resource": "^1.5.0"
   },
   "ignore": [
     "**/.*",

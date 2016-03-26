@@ -1,53 +1,31 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		concat: {
-			options: {
-			  separator: ';',
-			},
-			dist: {
-			  src: ['app/client/**/*.js', 'app/commande/**/*.js'],
-			  dest: 'dist/dimagest.js'
-			},
+		wiredep: {
+			task: {
+				src: [
+				  'index.html',   // .html support...
+				],
+				options: {
+				  // See wiredep's configuration documentation for the options
+				  // you may pass:
+
+				  // https://github.com/taptapship/wiredep#configuration
+				}
+			}
 		},
 		html2js: {
-		  options: {
-			base: 'app',
-			module: 'dmArticleReservation',
-			singleModule: true,
-			useStrict: true,
-			htmlmin: {
-			  collapseBooleanAttributes: true,
-			  collapseWhitespace: true,
-			  removeAttributeQuotes: true,
-			  removeComments: true,
-			  removeEmptyAttributes: true,
-			  removeRedundantAttributes: true,
-			  removeScriptTypeAttributes: true,
-			  removeStyleLinkTypeAttributes: true
-			}
-		  },
-		  main: {
-			src: ['*.html'],
-			dest: 'template.js'
-		  }
+			options: {
+			  // custom options, see below
+			},
+			main: {
+			  src: ['dm-article-reservation.html'],
+			  dest: 'dm-article-reservation.tpl.js'
+			},
 		}
-		
 	});
 
+	grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-html2js');
-	
-	grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-	  if (target === 'dist') {
-		return grunt.task.run(['build', 'connect:dist:keepalive']);
-	  }
-
-	  grunt.task.run([
-		'html2js:main',
-	  ]);
-	});
-
-	grunt.registerTask('build', [
-	  'html2js:main',
-	]);
+	grunt.registerTask('default', ['wiredep','html2js']);
   
 };

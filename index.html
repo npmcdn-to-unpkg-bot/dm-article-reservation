@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dmArticleReservation">
+    <head>
+        <title ></title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+		
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+        <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+        <!-- endbower -->
+        
+		<link id="ng_load_plugins_before" />
+    
+	<body  ng-controller="ctrlArticleReservation" layout="column">
+		<md-toolbar>
+			<div layout="row" class="md-toolbar-tools">
+				<span class="md-headline">Module article réservation</span>
+			</div>
+		</md-toolbar>
+		
+		<div layout="row" flex>
+			<md-sidenav flex layout="row" md-component-id="left" class="md-whiteframe-z2"></md-sidenav>
+		
+			<md-content ui-view id="content" flex  class="fade-in-up" ng-cloak>
+				<article-reservation article="article"></article-reservation>
+			</md-content>
+			
+		</div>
+		
+		<!-- bower:js -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-aria/angular-aria.js"></script>
+		<script src="bower_components/angular-messages/angular-messages.js"></script>
+		<script src="bower_components/angular-material/angular-material.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/angular-permission/dist/angular-permission.js"></script>
+		<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<!-- endbower -->
+	</body>
+</html>
