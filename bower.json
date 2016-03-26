@@ -1,0 +1,25 @@
+{
+  "name": "dimagest-reservation",
+  "authors": [
+    "Jamal AZZA <jamalazza@gmail.com>"
+  ],
+  "description": "reservation article pour dimagest",
+  "main": [
+    "./dm-article-reservation.js",
+	"./template.js"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "article",
+    "reservation"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

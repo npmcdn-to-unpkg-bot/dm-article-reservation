@@ -1,0 +1,23 @@
+{
+  "name": "dm-article-reservation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dm-article-reservation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamalazza/dimagest-reservation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamalazza/dimagest-reservation/issues"
+  },
+  "homepage": "https://github.com/jamalazza/dimagest-reservation#readme",
+  "devDependencies": {
+    "grunt-html2js": "^0.3.5",
+    "grunt-wiredep": "^2.0.0"
+  }
+}
