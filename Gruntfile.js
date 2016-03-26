@@ -14,13 +14,26 @@ module.exports = function(grunt) {
 			}
 		},
 		html2js: {
-			options: {
-			  // custom options, see below
-			},
-			main: {
-			  src: ['dm-article-reservation.html'],
-			  dest: 'dm-article-reservation.tpl.js'
-			},
+		  options: {
+			base: 'app',
+			module: 'dmArticleReservation',
+			singleModule: true,
+			useStrict: true,
+			htmlmin: {
+			  collapseBooleanAttributes: true,
+			  collapseWhitespace: true,
+			  removeAttributeQuotes: true,
+			  removeComments: true,
+			  removeEmptyAttributes: true,
+			  removeRedundantAttributes: true,
+			  removeScriptTypeAttributes: true,
+			  removeStyleLinkTypeAttributes: true
+			}
+		  },
+		  main: {
+			src: ['dm-article-reservation.html'],
+			dest: 'dm-article-reservation.tpl.js'
+		  }
 		}
 	});
 

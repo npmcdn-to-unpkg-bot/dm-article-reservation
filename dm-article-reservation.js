@@ -19,7 +19,7 @@
 	function articleReservation(Reservation, toastr, $templateCache) {
 		return {
 			restrict: 'EA',
-			template: '../dm-article-reservation.html',
+			templateUrl: '../dm-article-reservation.html',
 			scope: {
 				article:"=",
 			},
